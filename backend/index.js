@@ -63,7 +63,7 @@ app.post('/journal', (request, response) => {
 app.patch('/journal/:slug', (request, response) => {
     const info = request.body
     database('journalArticles')
-        .where({slug: request.params.slug})
+        .where({'slug': request.params.slug})
         .update(info)
         .returning('*')
         .then(articles => response.json(articles[0]))
@@ -75,13 +75,6 @@ app.delete('/journal/:slug', (request, response) => {
         .delete()
         .then(() => response.status(204))
 })
-
-// app.delete('/journal/:id', (request, response) => {
-//     database('journalArticles')
-//         .where({'id': request.params.id})
-//         .delete()
-//         .then(() => response.status(204))
-// })
 
 
 app.listen(port, () => console.log(`listening on port ${port}`))
