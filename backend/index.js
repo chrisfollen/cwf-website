@@ -22,9 +22,9 @@ app.get('/journal', (request, response) => {
         .then(articles => response.json(articles))
 })
 
-app.get('/journal/:id', (request, response) => {
+app.get('/journal/:slug', (request, response) => {
     database('journalArticles')
-        .where({id: request.params.id})
+        .where({slug: request.params.slug})
         .then(articles => response.json(articles[0]))
 })
 
@@ -56,23 +56,31 @@ app.post('/journal', (request, response) => {
             image_19_url: request.body.image_19_url,
             image_20_url: request.body.image_20_url,
         })
-        .returning(['id', 'title', 'date', 'body', 'slug', 'image_1_url', 'image_2_url'])
+        .returning('*')
         .then(articles => response.json(articles[0]))
 })
 
-app.patch('/journal/:id', (request, response) => {
+app.patch('/journal/:slug', (request, response) => {
     const info = request.body
     database('journalArticles')
-        .where({id: request.params.id})
+        .where({slug: request.params.slug})
         .update(info)
-        .returning(['id', 'title', 'date', 'body', 'slug', 'image_1_url', 'image_2_url'])
+        .returning('*')
         .then(articles => response.json(articles[0]))
+})
+
+app.delete('/journal/:slug', (request, response) => {
+    database('journalArticles')
+        .where({'slug': request.params.slug})
+        .delete()
+        .then(() => response.status(204))
 })
 
 // app.delete('/journal/:id', (request, response) => {
-//     Review.findByIdAndRemove(req.params.id).then((review) => {
-//       res.redirect('/');
-//     })
+//     database('journalArticles')
+//         .where({'id': request.params.id})
+//         .delete()
+//         .then(() => response.status(204))
 // })
 
 

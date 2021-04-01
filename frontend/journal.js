@@ -30,7 +30,13 @@ function parseJSON(data) {
 
 function putArticles(articles) {
 
-    articles.forEach(article => {
+    const sortedArticles = articles.sort((a, b) => {
+        if(a.date < b.date) { return 1; }
+        if(a.date > b.date) { return -1; }
+        return 0;
+    })
+
+    sortedArticles.forEach(article => {
         const card = document.createElement('div')
         card.className = 'journal-card'
         const title = document.createElement('h2')
@@ -39,10 +45,11 @@ function putArticles(articles) {
         date.className = 'journal-date'
         const image1 = document.createElement('img')
         image1.className = 'journal-image'
+        const slug = article.slug
         const link = document.createElement('a')
         link.className = 'journal-link'
         link.textContent = 'Read More'
-        link.href = '#'
+        link.href = `/article.html?a=${slug}`
 
         const dateArray = article.date.split('-')
 
