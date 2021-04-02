@@ -15,7 +15,6 @@ function closeMenu() {
     mobileMenu.style.top = '-100%'
 }
 
-
 const modal = document.querySelector('#image-modal')
 const modalContent = document.querySelector('#modal-content')
 const gallery = document.querySelector('#gallery')
@@ -31,14 +30,11 @@ function displayImageModal(event){
 
 }
 
-// Get the <span> element that closes the modal
 const close = document.getElementsByClassName("close")[0];
 
-// When the user clicks on <span> (x), close the modal
 close.onclick = function() {
     modal.classList.add('animate__fadeOut')
     setTimeout(closeModal, 500)
-    
 }
 
 function closeModal() {
