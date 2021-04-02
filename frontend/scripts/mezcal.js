@@ -15,7 +15,6 @@ function closeMenu() {
     mobileMenu.style.top = '-100%'
 }
 
-
 const container = document.querySelector('#admin-main')
 const baseURL = 'http://localhost:4000/journal/'
 
@@ -27,9 +26,6 @@ newPostButton.addEventListener('click', putAddPostForm)
 container.append(newPostButton)
 
 const modalContainer = document.querySelector('#modal-container')
-
-
-
 
 fetch(baseURL)
     .then(parseJSON)
@@ -412,7 +408,6 @@ function putAddPostForm() {
 
 }
 
-
 function closeAddPostForm() {
     postFormModal.style.display = 'none'
 }
@@ -492,7 +487,6 @@ function addPost(event) {
 }
 
 
-
 const editFormModal = document.createElement('div')
 editFormModal.className = 'edit-form-modal'
 
@@ -529,7 +523,7 @@ function putAddEditForm(article) {
     const editTitleLabel = document.createElement('label')
     editTitleLabel.setAttribute('for', 'edit-title')
     editTitleLabel.className = 'edit-form-label'
-    editTitleLabel.textContent = 'edit Title'
+    editTitleLabel.textContent = 'Edit Title'
 
     const editDate = document.createElement('input')
     editDate.setAttribute('type', 'text')
@@ -826,7 +820,6 @@ function putAddEditForm(article) {
     editForm.addEventListener('submit', addEdit)
     
     editFormModal.replaceChildren(closeModalDiv, editForm)
-
 
     modalContainer.replaceChildren(editFormModal)
 

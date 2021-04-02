@@ -13,10 +13,6 @@ app.use(bodyParser.json())
 const cors = require('cors');
 app.use(cors());
 
-app.get('/fun', (request, response) => {
-    response.send({message: 'having fun now, kid'})
-})
-
 app.get('/journal', (request, response) => {
     database('journalArticles')
         .then(articles => response.json(articles))
@@ -63,7 +59,7 @@ app.post('/journal', (request, response) => {
 app.patch('/journal/:slug', (request, response) => {
     const info = request.body
     database('journalArticles')
-        .where({'slug': request.params.slug})
+        .where({slug: request.params.slug})
         .update(info)
         .returning('*')
         .then(articles => response.json(articles[0]))
@@ -71,7 +67,7 @@ app.patch('/journal/:slug', (request, response) => {
 
 app.delete('/journal/:slug', (request, response) => {
     database('journalArticles')
-        .where({'slug': request.params.slug})
+        .where({slug: request.params.slug})
         .delete()
         .then(() => response.status(204))
 })

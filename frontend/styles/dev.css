@@ -1,0 +1,298 @@
+#dev-banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dev-banner-image {
+    margin: auto;
+    width: 100%;
+    height: 32em;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+#dev-banner-text {
+    position: absolute;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+    top: 4.5em;
+    color: white;
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+@media (max-width: 500px) {
+
+    #dev-banner-image {
+        height: 12em;
+    }
+
+    #dev-banner-text {
+        top: 2.8em;
+        font-size: 28px;
+        letter-spacing: 3px;
+    }
+
+}
+
+#dev-portfolio {
+    max-width:1175px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.dev-portfolio-project {
+    padding-top: 16em;
+    display: flex;
+}
+
+.dev-portfolio-text-column {
+    padding-right: 2em;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 2em;
+}
+
+.dev-portfolio-project-title {
+    font-size: 40px;
+    font-weight: 500;
+    text-align: left;
+    letter-spacing: 4px;
+}
+
+.dev-portfolio-project-text {
+    font-size: 24px;
+    text-align: left;
+    line-height: 1.4;
+}
+
+.dev-portfolio-project-link {
+    font-size: 24px;
+    text-align: left;
+}
+
+.dev-portfolio-video {
+    width: 50%;
+    padding-right: 2em;
+    padding-left: 2em;
+}
+
+.dev-portfolio-iframe {
+    width: 100%;
+    height: 350px;
+}
+
+.portfolio-spacer {
+    height: 12em;
+}
+
+hr {
+    height: 1px;
+    width: 100%;
+    background-color: rgb(148, 146, 146);
+    color: rgb(148, 146, 146);
+    max-width: 1175px;
+    border: none;
+}
+
+@media (max-width: 500px) {
+
+    .dev-portfolio-project{
+        padding: 0;
+        padding-top: 4em;
+        flex-direction: column;
+    }
+    .dev-portfolio-text-column {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-left: 0em;
+    }
+    
+    .dev-portfolio-project-title {
+        font-size: 24px;
+        font-weight: 400;
+        letter-spacing: 4px;
+        padding-bottom: .6em;
+    }
+    
+    .dev-portfolio-project-text {
+        font-size: 20px;
+        line-height: 1.4;
+        padding-bottom: .6em;
+    }
+    
+    .dev-portfolio-project-link {
+        font-size: 16px;
+        padding-bottom: 1.2em;
+    }
+    
+    .dev-portfolio-video {
+        width: 100%;
+        padding-right: 0em;
+        padding-left: 0em;
+    }
+    
+    
+    .dev-portfolio-iframe {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .portfolio-spacer {
+        height: 2em;
+    }
+    
+    hr {
+        height: 1px;
+        width: 100%;
+        background-color: rgb(148, 146, 146);
+        color: rgb(148, 146, 146);
+        max-width: 1175px;
+        border: none;
+    }
+
+}
+
+#dev-skills-and-tools {
+    max-width:1175px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+#dev-skills {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dev-skills-title-col {
+    width: 50%;
+    text-align: right;
+    padding-right: 4em;
+    padding-left: 4em;
+}
+
+#skills-list-col {
+    width: 50%;
+    padding-left: 4em;
+    padding-right: 4em;
+}
+
+#dev-skills-title {
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+#dev-skills-list {
+    padding-left: 8px;
+    font-size: 24px;
+    list-style-type: "-";
+    letter-spacing: 3px;
+    font-weight: 450;
+}
+
+#dev-skills-list > li {
+    padding: 16px;
+}
+
+#dev-tools {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dev-tools-image-col {
+    width: 50%;
+    padding-left: 4em;
+    padding-right: 4em;
+}
+
+#dev-tools-image-col > img {
+    width: 100%;
+}
+
+@media (max-width: 500px) {
+    #dev-skills-and-tools {
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        padding: 0;
+    }
+    
+    #dev-skills {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    #dev-skills-title-col {
+        width: 100%;
+        text-align: left;
+        padding: 0;
+    }
+    
+    #skills-list-col {
+        width: 100%;
+        padding: 0;
+    }
+    
+    #dev-skills-title {
+        font-size: 24px;
+        font-weight: 400;
+        letter-spacing: 4px;
+        padding: 0;
+        padding-bottom: .6em;
+    }
+    
+    #dev-skills-list {
+        font-size: 20px;
+        list-style-type: "-";
+        letter-spacing: 3px;
+        font-weight: 450;
+        padding: 0;
+        padding-left: 4em;
+    }
+    
+    #dev-skills-list > li {
+        padding: 0;
+        padding-top: 4px;
+    }
+    
+    #dev-tools {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        flex-direction: column;
+    }
+    
+    #dev-tools-image-col {
+        width: 100%;
+        padding: 0;
+    }
+    
+    #dev-tools-image-col > img {
+        width: 70%;
+        justify-content: center;
+        padding-left: 3em;
+    }
+
+}

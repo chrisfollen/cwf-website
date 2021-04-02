@@ -1,0 +1,225 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body {
+    margin: auto;
+    max-width: 92%;
+    padding: 0;
+    font-family: 'DINPro', sans-serif;
+    font-size: 14;
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+a:hover {
+    color: black;
+}
+
+
+/* HEADER & NAV BAR */
+header {
+    display: flex;
+    align-items: center;
+    padding-top: 4em;
+    padding-bottom: 8em;
+    justify-content: space-between;
+}
+
+#header-text {
+    font-size: 54px;
+    text-align: left;
+    width: auto;
+    padding: 0;
+    letter-spacing: 10px;
+    font-weight: 525;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-bar {
+    padding: 0;
+}
+
+.nav-bar > a {
+    font-size: 24px;
+    padding-left: 28px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    padding-bottom: 10px;
+    color: black;
+}
+
+.nav-bar > a:hover {
+    color: grey
+}
+
+.current-link {
+    text-decoration: underline;
+}
+
+.desktop {
+    display: flex;
+}
+
+.mobile {
+    display: none;
+}
+
+/* FOOTER  */
+
+footer {
+    text-align: center;
+    padding-top: 3em;
+    padding-bottom: 6em;
+}
+
+#footer-text {
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+@media (max-width: 500px) {
+    .desktop {
+        display: none;
+    }
+    
+    .mobile {
+        display: flex;
+    }
+
+    .mobile > nav {
+        font-size: 24px;
+    }
+    #header-text {
+        font-size: 32px;
+        letter-spacing: 4px;
+        font-weight: 525;
+        color: black;
+        text-decoration: none;
+    }
+
+    #mobile-menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(255, 255, 255);
+        justify-content: center;
+        align-items: center;
+    }
+
+    #mobile-menu > a{
+        font-size: 24px;
+        padding-top: 1em;
+        font-weight: 500;
+        color: black;
+        letter-spacing: 4px;
+    }
+
+    #close-mobile-menu {
+        font-size: 32px;
+        text-align: right;
+        font-weight: 500;
+    }
+
+    #close-mobile-menu:hover,
+    #close-mobile-menu:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    header {
+        padding-top: 4em;
+        padding-bottom: 4em;    
+    }
+
+    footer {
+        text-align: center;
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+    
+    #footer-text {
+        letter-spacing: 2px;
+        /* font-weight: 400; */
+        font-size: 14px;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 1em;
+    right: 2em;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+

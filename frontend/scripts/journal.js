@@ -15,14 +15,12 @@ function closeMenu() {
     mobileMenu.style.top = '-100%'
 }
 
-
 const container = document.querySelector('#journal-main')
 const baseURL = 'http://localhost:4000/journal'
 
 fetch(baseURL)
     .then(parseJSON)
     .then(putArticles)
-
 
 function parseJSON(data) {
     return data.json()
